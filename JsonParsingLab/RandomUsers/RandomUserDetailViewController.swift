@@ -9,22 +9,28 @@
 import UIKit
 
 class RandomUserDetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneNumLabel: UILabel!
+    @IBOutlet weak var DOBLabel: UILabel!
+    
+    var user: RandomUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        guard let detailVCUser = user else {
+            fatalError("Error: Couldn't pull RandomUser, check prepare segue")
+        }
+        addressLabel.text = String(detailVCUser.location.street.number) + " " + detailVCUser.location.street.name + ", " + detailVCUser.location.city + ", " +
+            detailVCUser.location.state + ", " + detailVCUser.location.country
+        phoneNumLabel.text = detailVCUser.phone
+        DOBLabel.text = detailVCUser.dob.date
     }
-    */
+
 
 }

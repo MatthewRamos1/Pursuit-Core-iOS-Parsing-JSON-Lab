@@ -20,8 +20,16 @@ class RandomUserListViewController: UIViewController {
         let data = Bundle.readJSONData(filename: "randomUserData", ext: "json")
         randomUserData = RandomUserData.getUsers(data: data)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let randomUserDetailController = segue.destination as? RandomUserDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("Error with preparing segue")
+        }
+        randomUserDetailController.user = randomUserData[indexPath.row]
+        }
 }
+
+
 
 extension RandomUserListViewController: UITableViewDataSource {
     

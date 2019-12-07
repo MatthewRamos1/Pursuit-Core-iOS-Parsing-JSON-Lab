@@ -17,6 +17,7 @@ struct RandomUser: Decodable {
     let email: String
     let location: Location
     let phone: String
+    let dob: DOB
 }
 
 struct Name: Decodable {
@@ -35,6 +36,10 @@ struct Location: Decodable {
 struct Street: Decodable {
     let number: Int
     let name: String
+}
+
+struct DOB: Decodable {
+    let date: String
 }
 
 extension RandomUserData {

@@ -127,20 +127,56 @@
                     <view key="view" contentMode="scaleToFill" id="vRV-eC-CMq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2f-dm-qfh">
+                                <rect key="frame" x="20" y="180" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXc-ew-FBY">
+                                <rect key="frame" x="20" y="214.5" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D.O.B." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="151-5e-9he">
+                                <rect key="frame" x="20" y="249" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="151-5e-9he" firstAttribute="leading" secondItem="nM0-G9-BMk" secondAttribute="leading" constant="20" id="1dw-fp-3b0"/>
+                            <constraint firstItem="KXc-ew-FBY" firstAttribute="leading" secondItem="nM0-G9-BMk" secondAttribute="leading" constant="20" id="9Wr-Rh-Wwr"/>
+                            <constraint firstItem="151-5e-9he" firstAttribute="top" secondItem="KXc-ew-FBY" secondAttribute="bottom" constant="8" id="Bmy-G4-MGy"/>
+                            <constraint firstItem="nM0-G9-BMk" firstAttribute="trailing" secondItem="151-5e-9he" secondAttribute="trailing" constant="20" id="PMN-uS-9oD"/>
+                            <constraint firstItem="KXc-ew-FBY" firstAttribute="top" secondItem="L2f-dm-qfh" secondAttribute="bottom" constant="8" id="Rtb-2M-dZR"/>
+                            <constraint firstItem="L2f-dm-qfh" firstAttribute="leading" secondItem="nM0-G9-BMk" secondAttribute="leading" constant="20" id="Zq8-pn-2vg"/>
+                            <constraint firstItem="nM0-G9-BMk" firstAttribute="trailing" secondItem="L2f-dm-qfh" secondAttribute="trailing" constant="20" id="aYo-J8-OH6"/>
+                            <constraint firstItem="L2f-dm-qfh" firstAttribute="top" secondItem="nM0-G9-BMk" secondAttribute="top" constant="40" id="sQA-zn-Xgf"/>
+                            <constraint firstItem="nM0-G9-BMk" firstAttribute="trailing" secondItem="KXc-ew-FBY" secondAttribute="trailing" constant="20" id="wQ0-hm-L4U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nM0-G9-BMk"/>
                     </view>
                     <navigationItem key="navigationItem" id="M6x-Qs-yYT"/>
+                    <connections>
+                        <outlet property="DOBLabel" destination="151-5e-9he" id="xfb-7j-kY7"/>
+                        <outlet property="addressLabel" destination="L2f-dm-qfh" id="Hve-i5-7ub"/>
+                        <outlet property="phoneNumLabel" destination="KXc-ew-FBY" id="ugS-nc-6DU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhg-Xq-9Pe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2770" y="1519"/>
+            <point key="canvasLocation" x="2769.5652173913045" y="1518.75"/>
         </scene>
-        <!--Item-->
+        <!--Users-->
         <scene sceneID="SB1-oC-ZPW">
             <objects>
                 <navigationController id="gEe-TB-AqO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lFm-ZI-iLr"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="3.circle" catalog="system" id="lFm-ZI-iLr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="yia-QU-h6H">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -252,7 +288,7 @@
         <scene sceneID="jiN-a4-GIn">
             <objects>
                 <navigationController id="vK1-R1-P8v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Colors" id="FpE-sb-lYv"/>
+                    <tabBarItem key="tabBarItem" title="Colors" image="2.circle.fill" catalog="system" id="FpE-sb-lYv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="URs-Ze-9c2">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -307,11 +343,11 @@
             </objects>
             <point key="canvasLocation" x="2769.5652173913045" y="115.84821428571428"/>
         </scene>
-        <!--Item-->
+        <!--Weather-->
         <scene sceneID="J88-g8-ZDV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M2G-zA-WiG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MOy-4e-eXn"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="1.circle" catalog="system" id="MOy-4e-eXn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Qqu-29-h1s">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -347,4 +383,9 @@
             <point key="canvasLocation" x="-201" y="783"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.circle" catalog="system" width="64" height="60"/>
+        <image name="2.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="3.circle" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
